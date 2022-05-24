@@ -171,7 +171,9 @@ app.post("/callback", async (req, res) => {
                 { new: true },
                 (err) => {
                   if (!err) {
-                    res.redirect("http://localhost:3000/allbookings");
+                    res.redirect(
+                      "https://connect-trip.netlify.app/allbookings"
+                    );
                   } else {
                     res.send(err);
                   }
