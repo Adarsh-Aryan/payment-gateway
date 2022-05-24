@@ -13,6 +13,10 @@ const parseJson = express.json({ extended: false });
 
 const PORT = process.env.PORT || 5000;
 
+app.post("/", (req, res) => {
+  res.send("Payment Gateway Succeeded!");
+});
+
 app.post("/paynow", [parseUrl, parseJson], async (req, res) => {
   // Route for making payment
   console.log(">>>>", req.body);
