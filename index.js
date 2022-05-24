@@ -13,7 +13,7 @@ const parseJson = express.json({ extended: false });
 
 const PORT = process.env.PORT || 5000;
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Payment Gateway Succeeded!");
 });
 
